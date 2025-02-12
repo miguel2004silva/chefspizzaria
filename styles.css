@@ -1,0 +1,225 @@
+
+:root {
+    font-size: 10px;
+    --main-color: #d3ad7f;
+    --black: #131313;
+    --bg: #010103;
+    --border: 0.1rem solid rgba(255, 255, 255, 0.3);
+
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: "Poppins", serif;
+}
+
+.caixa-foto {
+    position: fixed;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+}
+
+.caixa-foto img {
+    min-height: 100%;
+    min-width: 100%;
+    position: fixed;
+    top: 0;
+}
+
+.mascara {
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    background: linear-gradient(109deg, rgba(10, 12, 16, 0.99) 15%, rgba(10, 12, 16, 0.7) 50%, rgba(10, 12, 16, 0.99) 85%);
+}
+
+section{
+    padding: 3rem 2rem;
+    margin: 0 auto;
+    max-width: 1200px;
+}
+
+/* Header fixo */
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    z-index: 1000;
+    background-color: transparent; /* Inicialmente transparente */
+    padding: 15px 0;
+    transition: background-color 0.3s ease-in-out, padding 0.3s ease-in-out;
+}
+
+/* Quando rolar a página */
+.header.scrolled {
+    background-color: rgba(19, 19, 19, 0.85); /* Preto suave com transparência */
+    backdrop-filter: blur(8px); /* Efeito vidro fosco */
+    padding: 10px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1); /* Linha sutil na base */
+}
+
+
+    .header.scrolled {
+        padding: 8px 0;
+    }
+
+
+
+
+
+.header section {
+display: flex;
+align-items: center;
+justify-content: flex-start;
+gap: 50px;
+padding-top: 1.5rem 0;
+position: relative;
+}
+
+.header section a img {
+    height: 6rem;
+}
+
+.header section nav a {
+    margin: 0 1rem;
+    font-size: 1.8rem;
+    color: #fff;
+    transition: font-size 0.3s ease-in-out; /* Transição para o tamanho da fonte */
+}
+
+/* Aumento do tamanho da fonte no hover */
+.header section nav a:hover {
+    font-size: 2rem; /* Aumenta o tamanho da fonte para 2rem */
+}
+
+
+.caixa-principal {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+}
+
+.caixa-principal div{
+    max-width: 60rem;
+}
+
+.caixa-principal div h3 {
+font-size: 6rem;
+text-transform: uppercase;
+    color: #fff;
+}
+
+.caixa-principal div p{
+    font-size: 2rem;
+    color: #fff;
+    font-weight: lighter;
+    padding: 1rem 0;
+    line-height: 1.8;
+}
+
+
+/* Estilizando apenas os botões com a classe "botao" */
+.botao {
+    display: inline-block;
+    padding: 12px 24px;
+    background-color: #010103; /* Marrom escuro */
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 8px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+/* Efeito hover apenas nos botões */
+.botao:hover {
+    background-color: #D2B48C; /* Marrom claro */
+    color: #333;
+    transform: scale(1.05);
+    letter-spacing: 0.1rem;
+}
+
+
+
+.caixa-sobre h2{
+    text-align: center;
+    color: #fff;
+    text-transform: uppercase;
+    padding-bottom: 3.5rem;
+    font-size: 4rem;
+
+}
+
+
+.caixa-sobre h2 span{
+color: #d3ad7f;
+}
+
+.caixa-sobre .sobre-container{
+    display: flex;
+    align-items: center;
+    background-color: #010103;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+}
+
+.caixa-sobre .sobre-container .sobre-imagem{
+flex: 1 1 45rem;
+}
+
+.caixa-sobre .sobre-container .sobre-imagem img{
+    width: 100%;
+    }
+
+.caixa-sobre .sobre-container .sobre-texto{
+    flex: 1 1 45rem;
+    padding: 2rem;
+}
+
+.caixa-sobre .sobre-container .sobre-texto h3{
+    font-size: 3rem;
+    color: #fff;
+}
+    .caixa-sobre .sobre-container .sobre-texto p{
+        font-size: 1.5rem;
+        font-weight: lighter;
+        color: #fff;
+        line-height: 1.8;
+        padding: 1rem 0;
+    }
+        .caixa-sobre .sobre-container .sobre-texto{
+
+        }
+
+
+        .botao-btn {
+            display: inline-block;
+            padding: 12px 24px;
+            background-color: rgba(19, 19, 19, 0.85); /* Marrom escuro */
+            color: white;
+            text-decoration: none;
+            font-size: 16px;
+            font-weight: bold;
+            border-radius: 8px;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+        }
+        
+        /* Efeito hover apenas nos botões */
+        .botao-btn:hover {
+            background-color: #d3ad7f; /* Marrom claro */
+            color: #333;
+            transform: scale(1.05);
+            letter-spacing: 0.1rem;
+        }
