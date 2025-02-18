@@ -1,4 +1,3 @@
-
 :root {
     font-size: 10px;
     --main-color: #d3ad7f;
@@ -14,7 +13,7 @@ html {
 
 
 
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -44,48 +43,54 @@ html {
     background: linear-gradient(109deg, rgba(10, 12, 16, 0.99) 15%, rgba(10, 12, 16, 0.7) 50%, rgba(10, 12, 16, 0.99) 85%);
 }
 
-section{
+section {
     padding: 3rem 2rem;
     margin: 0 auto;
     max-width: 1200px;
 }
 
-/* Header fixo */
 .header {
     position: fixed;
     top: 0;
     left: 0;
     width: 100vw;
     z-index: 1000;
-    background-color: transparent; /* Inicialmente transparente */
-    padding: 15px 0;
-    transition: background-color 0.3s ease-in-out, padding 0.3s ease-in-out;
+    background-color: transparent;
+    height: 80px;
+    /* Define altura fixa */
+    transition: all 0.3s ease-in-out;
+    display: flex;
+    align-items: center;
 }
 
-/* Quando rolar a página */
+/* Reduzindo o tamanho ao rolar */
 .header.scrolled {
-    background-color: rgba(19, 19, 19, 0.85); /* Preto suave com transparência */
-    backdrop-filter: blur(8px); /* Efeito vidro fosco */
-    padding: 10px 0;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1); /* Linha sutil na base */
+    background-color: #010103;
+    backdrop-filter: blur(8px);
+    height: 90px;
+    /* Mantém a altura menor ao rolar */
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+
 }
 
 
-    .header.scrolled {
-        padding: 8px 0;
-    }
-
+/* Impede a mudança da fonte */
+.header section nav a {
+    font-size: 1.8rem;
+    transition: none;
+    /* Remove transições na fonte para evitar tremores */
+}
 
 
 
 
 .header section {
-display: flex;
-align-items: center;
-justify-content: flex-start;
-gap: 50px;
-padding-top: 1.5rem 0;
-position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 30px;
+    padding-top: 1.5rem 0;
+    position: relative;
 }
 
 .header section a img {
@@ -96,12 +101,15 @@ position: relative;
     margin: 0 1rem;
     font-size: 1.8rem;
     color: #fff;
-    transition: font-size 0.3s ease-in-out; /* Transição para o tamanho da fonte */
+    transition: font-size 0.3s ease-in-out;
+    /* Transição para o tamanho da fonte */
 }
 
 /* Aumento do tamanho da fonte no hover */
 .header section nav a:hover {
-    font-size: 2rem; /* Aumenta o tamanho da fonte para 2rem */
+    font-size: 2rem;
+    /* Aumenta o tamanho da fonte para 2rem */
+
 }
 
 
@@ -111,17 +119,17 @@ position: relative;
     align-items: center;
 }
 
-.caixa-principal div{
+.caixa-principal div {
     max-width: 60rem;
 }
 
 .caixa-principal div h3 {
-font-size: 6rem;
-text-transform: uppercase;
+    font-size: 6rem;
+    text-transform: uppercase;
     color: #fff;
 }
 
-.caixa-principal div p{
+.caixa-principal div p {
     font-size: 2rem;
     color: #fff;
     font-weight: lighter;
@@ -134,7 +142,8 @@ text-transform: uppercase;
 .botao {
     display: inline-block;
     padding: 12px 24px;
-    background-color: #010103; /* Marrom escuro */
+    background-color: #010103;
+    /* Marrom escuro */
     color: white;
     text-decoration: none;
     font-size: 16px;
@@ -145,7 +154,8 @@ text-transform: uppercase;
 
 /* Efeito hover apenas nos botões */
 .botao:hover {
-    background-color: #D2B48C; /* Marrom claro */
+    background-color: #D2B48C;
+    /* Marrom claro */
     color: #333;
     transform: scale(1.05);
     letter-spacing: 0.1rem;
@@ -153,7 +163,7 @@ text-transform: uppercase;
 
 
 
-.caixa-sobre h2{
+.titulo {
     text-align: center;
     color: #fff;
     text-transform: uppercase;
@@ -163,11 +173,11 @@ text-transform: uppercase;
 }
 
 
-.caixa-sobre h2 span{
-color: #d3ad7f;
+.titulo span {
+    color: #d3ad7f;
 }
 
-.caixa-sobre .sobre-container{
+.caixa-sobre .sobre-container {
     display: flex;
     align-items: center;
     background-color: #010103;
@@ -175,51 +185,84 @@ color: #d3ad7f;
     flex-wrap: wrap;
 }
 
-.caixa-sobre .sobre-container .sobre-imagem{
-flex: 1 1 45rem;
+.caixa-sobre .sobre-container .sobre-imagem {
+    flex: 2 2 45rem;
+    
 }
 
-.caixa-sobre .sobre-container .sobre-imagem img{
-    width: 100%;
-    }
 
-.caixa-sobre .sobre-container .sobre-texto{
+.caixa-sobre .sobre-container .sobre-imagem img {
+    width: 103%;
+}
+
+.caixa-sobre .sobre-container .sobre-texto {
     flex: 1 1 45rem;
     padding: 2rem;
 }
 
-.caixa-sobre .sobre-container .sobre-texto h3{
+.caixa-sobre .sobre-container .sobre-texto h3 {
     font-size: 3rem;
     color: #fff;
 }
-    .caixa-sobre .sobre-container .sobre-texto p{
-        font-size: 1.5rem;
-        font-weight: lighter;
-        color: #fff;
-        line-height: 1.8;
-        padding: 1rem 0;
-    }
-        .caixa-sobre .sobre-container .sobre-texto{
 
-        }
+.caixa-sobre .sobre-container .sobre-texto p {
+    font-size: 1.5rem;
+    font-weight: lighter;
+    color: #fff;
+    line-height: 1.8;
+    padding: 1rem 0;
+}
+
+.caixa-sobre .sobre-container .sobre-texto {}
 
 
-        .botao-btn {
-            display: inline-block;
-            padding: 12px 24px;
-            background-color: rgba(19, 19, 19, 0.85); /* Marrom escuro */
-            color: white;
-            text-decoration: none;
-            font-size: 16px;
-            font-weight: bold;
-            border-radius: 8px;
-            transition: background-color 0.3s ease, transform 0.2s ease;
-        }
-        
-        /* Efeito hover apenas nos botões */
-        .botao-btn:hover {
-            background-color: #d3ad7f; /* Marrom claro */
-            color: #333;
-            transform: scale(1.05);
-            letter-spacing: 0.1rem;
-        }
+.botao-btn {
+    display: inline-block;
+    padding: 12px 24px;
+    background-color: rgba(19, 19, 19, 0.85);
+    /* Marrom escuro */
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 8px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+/* Efeito hover apenas nos botões */
+.botao-btn:hover {
+    background-color: #d3ad7f;
+    /* Marrom claro */
+    color: #333;
+    transform: scale(1.05);
+    letter-spacing: 0.1rem;
+}
+
+.header section nav a {
+    transition: color 0.3s ease-in-out;
+}
+
+
+.modal {
+    display: flex;
+    flex-direction: column;
+    background-color: transparent;
+    gap: 20px;
+    z-index: 4;
+    position: fixed;
+    top: 50%;
+    left: -30%;
+    transform: translate(-50%, -50%);
+    transition: left 1s linear;
+}
+
+.mascara-modal {
+    visibility: hidden;
+    z-index: 3;
+    position: fixed;
+    inset: 0;
+    width: 100vw;
+    height: 100vh;
+    background: linear-gradient(109deg, rgba(10, 12, 16, 0.99) 15%, rgba(10, 12, 16, 0.7) 50%, rgba(10, 12, 16, 0.99) 85%);
+
+}
